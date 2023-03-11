@@ -5,7 +5,7 @@
 
 ### Cmd
 
-> Can install with `go get -u github.com/gol-gol/golbuild/cmd`.
+> Prepare a binary for you as `go build -o golbuild cmd/golbuild.go`.
 
 * Running `golbuild -f .golbuild.json` would create file for current build.
 
@@ -28,5 +28,7 @@ err := golbuild.Unmarshal(BuildBytes, &build)
 ```
 
 * to directly display details from `BuildBytes`, can use `golbuild.Print(BuildBytes)`
+
+* also if want to manage yourselves, can utilize `(build *GolBuild) FetchDetails()` and `(build *GolBuild) Print()`
 
 ---
